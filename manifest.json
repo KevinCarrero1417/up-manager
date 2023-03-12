@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "UP manager",
+  "description": "Extension to manage usernames and passwords of web pages",
+  "version": "0.1",
+  "icons": {
+    "128": "./img/icon.png"
+  },
+  "permissions": ["activeTab", "storage"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["./js/content.js"]
+    }
+  ]
+}
